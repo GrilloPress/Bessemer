@@ -54,28 +54,31 @@ Particle.prototype = {
 // ----------------------------------------
 
 var MAX_PARTICLES = 280;
-var COLOURS = ['#69D2E7', '#A7DBD8', '#E0E4CC', '#F38630', '#FA6900', '#FF4E50', '#F9D423'];
+var COLOURS = ['#FF8B06', '#E85C04', '#E0E4CC', '#F38630', '#FA6900', '#FF4E50', '#F9D423'];
 
 var particles = [];
 var pool = [];
 
-var demo = Sketch.create({
-    container: document.getElementById('forge')
+var slag = Sketch.create({
+    container: document.getElementById('forge'),
+    fullscreen: false,
+    width: 2000, 
+    height: 800
 });
 
-demo.setup = function() {
+slag.setup = function() {
 
     // Set off some initial particles.
     var i, x, y;
 
     for (i = 0; i < 20; i++) {
-        x = (demo.width * 0.5) + random(-100, 100);
-        y = (demo.height * 0.5) + random(-100, 100);
-        demo.spawn(x, y);
+        x = (slag.width * 0.5) + random(-100, 100);
+        y = (slag.height * 0.5) + random(-100, 100);
+        slag.spawn(x, y);
     }
 };
 
-demo.spawn = function(x, y) {
+slag.spawn = function(x, y) {
 
     if (particles.length >= MAX_PARTICLES)
         pool.push(particles.shift());
@@ -96,7 +99,7 @@ demo.spawn = function(x, y) {
     particles.push(particle);
 };
 
-demo.update = function() {
+slag.update = function() {
 
     var i, particle;
 
@@ -109,24 +112,24 @@ demo.update = function() {
     }
 };
 
-demo.draw = function() {
+slag.draw = function() {
 
-    demo.globalCompositeOperation = 'lighter';
+    slag.globalCompositeOperation = 'lighter';
 
     for (var i = particles.length - 1; i >= 0; i--) {
-        particles[i].draw(demo);
+        particles[i].draw(slag);
     }
 };
 
-demo.mousemove = function() {
+slag.mousemove = function() {
 
     var particle, theta, force, touch, max, i, j, n;
 
-    for (i = 0, n = demo.touches.length; i < n; i++) {
+    for (i = 0, n = slag.touches.length; i < n; i++) {
 
-        touch = demo.touches[i], max = random(1, 4);
+        touch = slag.touches[i], max = random(1, 4);
         for (j = 0; j < max; j++) {
-            demo.spawn(touch.x, touch.y);
+            slag.spawn(touch.x, touch.y);
         }
 
     }
