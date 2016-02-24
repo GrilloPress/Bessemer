@@ -1,10 +1,16 @@
 #crucible {
   
   position: absolute;
-  top: 140px;
+  top: 120px;
   left: 30%;
   right: 30%;
   text-align: center;
+  
+  @media screen and (max-width: $screen-xs){
+    
+    top: 80px;
+    
+  }
   
   h1 {
     
