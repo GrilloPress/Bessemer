@@ -4,11 +4,49 @@
   top: 140px;
   left: 30%;
   right: 30%;
+  text-align: center;
+  
+  h1 {
+    
+    color: white;
+    
+  }
+  
+  p {
+    
+    color: white;
+    
+  }
   
 }
 
 #forge {
   
   max-height: 350px;
+  background-color: $brand-primary;
+  
+}
+
+#belt {
+  
+  padding-top: 50px;
+  
+  h2 {
+    
+    text-align: center;
+    color: $brand-primary;
+    margin-bottom: 2em;
+    
+  }
+  
+}
+
+.image-blocks {
+  
+  img {
+    
+    margin-bottom: 1em;
+    
+  }
   
 }

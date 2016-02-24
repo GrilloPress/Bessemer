@@ -11,11 +11,11 @@ $gray:                   darken(#666, 10%);
 $gray-light:             #bbb;
 $gray-lighter:           lighten($gray-base, 93.5%); // #eee
 
-$brand-primary:         #e51c23;
+$brand-primary:         #a6172d;
 $brand-success:         #4CAF50;
 $brand-info:            #01579B;
 $brand-warning:         #FCB040;
-$brand-danger:          #BB050B;
+$brand-danger:          #8A0B1F;
 $brand-grey:            #EFDCE2;
 
 
@@ -24,7 +24,7 @@ $brand-grey:            #EFDCE2;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #efefef;
+$body-bg:               #f4f5f9;
 //** Global text color on `<body>`.
 $text-color:            $gray;
 
@@ -45,7 +45,7 @@ $font-family-serif:       Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 $font-family-base:        $font-family-sans-serif;
 
-$font-size-base:          15px;
+$font-size-base:          18px;
 $font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)); // ~12px
 
@@ -353,7 +353,7 @@ $navbar-collapse-max-height:       340px;
 
 $navbar-default-color:             #ffffff;
 $navbar-default-bg:                $brand-primary;
-$navbar-default-border:            #DDDDDD;
+$navbar-default-border:            $brand-danger;
 
 // Navbar links
 $navbar-default-link-color:                #ffffff;

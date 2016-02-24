@@ -61,9 +61,7 @@ var pool = [];
 
 var slag = Sketch.create({
     container: document.getElementById('forge'),
-    fullscreen: false,
-    width: 2000, 
-    height: 800
+    fullscreen: true
 });
 
 slag.setup = function() {
